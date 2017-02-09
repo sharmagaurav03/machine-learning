@@ -7,7 +7,14 @@ function J = computeCostMulti(X, y, theta)
 m = length(y); % number of training examples
 
 % You need to return the following variables correctly 
-J = 0;
+%J = 0;
+
+
+predictions = X*theta;
+sqrErrors=	(predictions-y);
+% You need to return the following variables correctly 
+J = 1/(2*m) *(sqrErrors)'*sqrErrors;
+
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost of a particular choice of theta
